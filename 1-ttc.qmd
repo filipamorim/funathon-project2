@@ -122,7 +122,7 @@ Print the first rows and the total number of observations. Do you understand all
 
 <details>
 <summary>Clue here</summary>
-You may use the function `pl.read_parquet()`, and the methods `.head()`, and `len(df)`.
+You may use the functions `pl.read_parquet()` and `len()`, and the method `.head()`.
 </details>
 ```{python}
 #| label: load-data
