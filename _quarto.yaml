@@ -1,8 +1,7 @@
 project:
   type: website
   render:
-    - "1-ttc.qmd"
-    # - "*.qmd"
+    - "*.qmd"
 website:
   title: "AIML4OS Funathon - Project 2"
   page-navigation: true
