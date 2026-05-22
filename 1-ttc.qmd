@@ -379,34 +379,33 @@ These are configured through `ModelConfig` and assembled automatically by `torch
 
 # Training
 
-Training a neural network means finding the weights that minimise a **loss function** — a measure
-of how wrong the model's predictions are. At each step, the model makes predictions on a
-**mini-batch** of examples, computes the loss, and updates the weights in the direction that
-reduces it (via **gradient descent**).
+Training a neural network means finding the weights that minimise a **loss function** — a measure of how wrong the model's predictions are. At each step, the model makes predictions on a **mini-batch** of examples, computes the loss, and updates the weights in the direction that reduces it (via **gradient descent**).
 
 Key training hyperparameters:
 
 - `num_epochs`: how many times the model sees the full training set.
 - `batch_size`: how many examples are processed at once before a weight update.
 - `lr` (learning rate): how large each weight update step is.
-- `patience_early_stopping`: stop training if the validation loss has not improved for this
-  many epochs, to avoid overfitting.
+- `patience_early_stopping`: stop training if the validation loss has not improved for this many epochs, to avoid overfitting.
 
 ::: {.callout-tip collapse="false" icon=false}
 ## `<i class="bi bi-book"></i>`{=html} Exercice 4: Train the model
 
-`torchTextClassifiers` provides a high-level wrapper that combines the value encoder, tokenizer, model
-components, and training loop.
+`torchTextClassifiers` provides a high-level wrapper that combines the value encoder, tokenizer, model components, and training loop.
 
 ## Question 1 — Instantiate the classifier
 
-Instantiate the classifier from a `ModelConfig` and the trained tokenizer.
+Using the `torchTextClassifiers` package, create a `ModelConfig`. Then create a `torchTextClassifiers` classifier that uses this `ModelConfig` and the trained tokenizer. Set the dimension of embeddings to 96. You will need to read carefully the [`torchTextClassifiers` documentation](https://inseefrlab.github.io/torchTextClassifiers/api/index.html).
 
-*Build a  `ModelConfig` with `embedding_dim` and `num_classes`. Pass both to `torchTextClassifiers(tokenizer=..., model_config=..., value_encoder=...)`.*
+<details>
+<summary>Clue here</summary>
+Build a  `ModelConfig` with `embedding_dim` and `num_classes`. Pass both to `torchTextClassifiers(tokenizer=..., model_config=..., value_encoder=...)`.
+</details>
+
 
 ::: {.callout-note appearance="simple" collapse="true"}
 ## Key parameter
-- `embedding_dim=96`: size of the dense vector representing each token. Larger values capture more information but are slower to train.
+The hyperparameter `embedding_dim` controls the size of the dense vector representing each token. Larger values capture more information but are slower to train.
 :::
 ```{python}
 #| label: model-config
