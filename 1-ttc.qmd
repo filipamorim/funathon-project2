@@ -440,11 +440,6 @@ Using the `torchTextClassifiers` package, create a `ModelConfig`. Then create a 
 Build a  `ModelConfig` with `embedding_dim` and `num_classes`. Pass both to `torchTextClassifiers(tokenizer=..., model_config=..., value_encoder=...)`.
 </details>
 
-<details>
-<summary>Clue here</summary>
-Build a  `ModelConfig` with `embedding_dim` and `num_classes`. Pass both to `torchTextClassifiers(tokenizer=..., model_config=..., value_encoder=...)`.
-</details>
-
 ::: {.callout-note appearance="simple" collapse="true"}
 ## Key parameter
 The hyperparameter `embedding_dim` controls the size of the dense vector representing each token. Larger values capture more information but are slower to train.
@@ -481,12 +476,6 @@ Create a `TrainingConfig(lr=..., batch_size=..., num_epochs=...)` and call `ttc.
 ## Play with hyperparameters
 Of course, you can play with hyperparameters if you want: add more epochs, change the learning rate and the batch size... But __remember that you are training the model using CPUs, so avoid big models that will take a lot of time and resources to train__.
 :::
-
-
-<details>
-<summary>Clue here</summary>
-Create a `TrainingConfig(lr=..., batch_size=..., num_epochs=...)`.
-</details>
 
 ::: {.callout-note appearance="simple" collapse="true"}
 ## Want to learn what hyperparameters do?
